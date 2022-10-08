@@ -58,6 +58,7 @@ class Modelo(ModeloGeneral):
 
         # numIndSubp = (D['N'] / numSubpoblacionesTotales) * (3 - D['tasaCruce'])
         numIndSubp = (D['N'] / numSubpoblacionesTotales) * (1 + D['tasaCruce'])
+        # numIndSubp = (D['N'] / numSubpoblacionesTotales) * (D['tasaCruce'])
 
         # Vamos a asumir por ahora que no hay migraciones locales.
 

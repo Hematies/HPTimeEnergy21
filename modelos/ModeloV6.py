@@ -28,6 +28,12 @@ class Modelo(ModeloMioV2):
         self.nombreModelo = nombreModelo
         self.MAX_VALOR_P = 10.0
 
+        # PRUEBAS
+        self.MAX_VALOR_P = 1000.0
+        self.MAX_VALOR_T = 200.0
+        self.MAX_VALOR_W = 10e10
+        self.datos['gen'] = int(self.datos['gen'] / self.datos['NGmig'])
+
         self.tipoModelado = MODELAR_TIEMPO_ENERGIA
 
         # PARA DEPURAR:

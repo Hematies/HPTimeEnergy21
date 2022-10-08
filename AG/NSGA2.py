@@ -46,7 +46,7 @@ def uniform(low, up, size=None):
 class NSGA2:
 
     def __init__(self, modelo,
-                 NGEN=150, MU=100,
+                 NGEN=100, MU=120,
                  modeloOptimizacionReparto=False,
                  modeloOptimizacionNucleosActivos=False):# NGEN=150, MU=100):
 
@@ -74,7 +74,7 @@ class NSGA2:
 
         NDIM = numParametrosIndividuo
 
-        similitudPadreHijo = 1.0
+        similitudPadreHijo = 0.75
 
         toolbox.register("attr_float", uniform, BOUND_LOW, BOUND_UP, NDIM)
         toolbox.register("individual", tools.initIterate, creator.Individual, modelo.construirIndividuo)
@@ -88,7 +88,12 @@ class NSGA2:
         # Bounded crossover:
         toolbox.register("mate", tools.cxSimulatedBinaryBounded, low=BOUND_LOW, up=BOUND_UP, eta=similitudPadreHijo)
 
-        toolbox.register("mutate", tools.mutPolynomialBounded, low=BOUND_LOW, up=BOUND_UP, eta=similitudPadreHijo, indpb=1.0 / NDIM)
+        PROBABILIDAD_MUTACION = 0.005
+        toolbox.register("mutate", tools.mutPolynomialBounded, low=BOUND_LOW, up=BOUND_UP, eta=similitudPadreHijo,
+                         # indpb = PROBABILIDAD_MUTACION)
+                         indpb=1.0 / NDIM)
+
+
         toolbox.register("select", tools.selNSGA2)
 
         self.toolbox = toolbox
@@ -105,6 +110,8 @@ class NSGA2:
             MU = self.MU
         #CXPB = 0.9
         CXPB = 0.7
+        # PROBABILIDAD_MUTACION_INICIAL = 0.9
+        # PROBABILIDAD_MUTACION = PROBABILIDAD_MUTACION_INICIAL
 
         stats = tools.Statistics(lambda ind: ind.fitness.values)
         stats.register("min", numpy.min, axis=0)
@@ -138,9 +145,17 @@ class NSGA2:
                 if random.random() <= CXPB:
                     toolbox.mate(ind1, ind2)
 
+                '''
+                if random.random() <= PROBABILIDAD_MUTACION:
+                    toolbox.mutate(ind1)
+                    toolbox.mutate(ind2)
+                '''
                 toolbox.mutate(ind1)
                 toolbox.mutate(ind2)
+
                 del ind1.fitness.values, ind2.fitness.values
+
+            # PROBABILIDAD_MUTACION = PROBABILIDAD_MUTACION / 1.025
 
             # Evaluate the individuals with an invalid fitness
             invalid_ind = [ind for ind in offspring if not ind.fitness.valid]

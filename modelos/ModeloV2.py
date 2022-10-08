@@ -50,7 +50,8 @@ class Modelo(ModeloMioV1):
             indiceDisp = rankingNodoDisp[0][1]
 
             # Actualizamos la m2arca temporal de fin de ejecución del dispositivo más el coste de comunicación:
-            rankingNodoDisp[0][2] = rankingNodoDisp[0][2] + costesTemporales[indiceNodo][indiceDisp] + 2 * self.datos['Tcom']
+            rankingNodoDisp[0][2] = rankingNodoDisp[0][2] + costesTemporales[indiceNodo][indiceDisp] \
+                                    + 2 * self.datos['Tcom']
 
             # Actualizamos los números de subpoblaciones:
             res[indiceNodo][indiceDisp] = res[indiceNodo][indiceDisp] + 1

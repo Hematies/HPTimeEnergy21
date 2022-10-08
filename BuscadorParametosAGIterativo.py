@@ -42,8 +42,8 @@ nombreWorkspace = 'workspc_30N'
 
 # Este script aplica ajuste (o simple importación) de un modelo y muestra los resultados de visualizar el espacio de
 # configuraciones al optimizar en núcleos activos:
-importarModelo = True # ¿Importamos un modelo ya ajustado?
-importarDatosSimulacion = True # ¿Importamos el espacio de configuraciones?
+importarModelo = False # ¿Importamos un modelo ya ajustado?
+importarDatosSimulacion = False # ¿Importamos el espacio de configuraciones?
 direccionFicheroModelo = "ficherosModelos/ModeloV6_19_08_2021_19_47.mod"
 
 if (not importarModelo) or (direccionFicheroModelo == None):

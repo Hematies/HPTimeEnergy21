@@ -55,7 +55,7 @@ mejoresIndividuos = []
 nombreWorkspace = '../workspc_30N'
 
 # En el presente script se evalúa la estabilidad de los parámetros.
-importarDatos = False # ¿Importamos los datos de estabilidad ya calculados con anterioridad?
+importarDatos = True # ¿Importamos los datos de estabilidad ya calculados con anterioridad?
 
 ahora = datetime.now()
 cadena = ahora.strftime("%d_%m_%Y_%H_%M")
@@ -133,7 +133,7 @@ if not importarDatos:
     dataframe.to_csv('testEstabilidad_'+modelo.nombreModelo + '_' + cadena + '.csv')
 else:
 
-    dataframe = pd.read_csv('testEstabilidad_ModeloV6_17_08_2021_18_52.csv')
+    dataframe = pd.read_csv('testEstabilidad_ModeloV6_29_09_2022_17_42.csv')
 
 desviaciones = dataframe.std(axis = 0)
 medias = dataframe.mean(axis=0)
