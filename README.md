@@ -22,11 +22,16 @@ With the exception of files from directories "AG", "PSO", "modelos" and the file
 
 ## Funding
 
-Este trabajo forma parte del proyecto [EFFICOMP](https://efficomp.ugr.es/) y ha sido apoyado por:
+This work is part of the [EFFICOMP](https://efficomp.ugr.es/) project and has been supported by:
 
-* [*Ministerio de Ciencia, Innovación y Universidades*](https://www.ciencia.gob.es/): PGC2018-098813-B-C31.
-* [*Fondo Europeo de Desarrollo Regional (FEDER)*](https://ec.europa.eu/regional_policy/en/funding/erdf/).
+* Spanish [*Ministerio de Ciencia, Innovación y Universidades*](https://www.ciencia.gob.es/) under grant number PGC2018-098813-B-C31.
+* [*European Regional Development Fund (ERDF)*](https://ec.europa.eu/regional_policy/en/funding/erdf/).
 
+<div style="text-align: right">
+  <img src="https://raw.githubusercontent.com/efficomp/Hpmoon/main/docs/logos/mineco.png" height="60">
+  <img src="https://raw.githubusercontent.com/efficomp/Hpmoon/main/docs/logos/miciu.jpg" height="60">
+  <img src="https://raw.githubusercontent.com/efficomp/Hpmoon/main/docs/logos/erdf.png" height="60">
+</div>
 <div style="text-align: right">
   <img src="https://raw.githubusercontent.com/efficomp/Hpmoon/main/docs/logos/miciu.jpg" height="60">
   <img src="https://raw.githubusercontent.com/efficomp/Hpmoon/main/docs/logos/erdf.png" height="60">
