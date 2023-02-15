@@ -4,7 +4,8 @@ Un algoritmo evolutivo para el ajuste de parámetros de modelos de energía y ti
 
 Software original para las distintas tareas de experimentación del TFM "Energy Consumption and Runtime Modeling of Parallel Algorithms in Heterogeneous Clusters". 
 
-Author: Pablo Sánchez Cuevas.
+Autor: Pablo Sánchez Cuevas.
+
 Tutores: Julio Ortega y Juan José Escobar.
 
 ## Financiación
